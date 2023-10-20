@@ -1,51 +1,5 @@
-class Grupo {
-    constructor(id, numAlumnos) {
-        this._id = id;
-        this._numAlumnos = numAlumnos;
-    }
-
-    get Id() {
-        return this._id;
-    }
-
-    set Id(id) {
-        this._id = id;
-    }
-
-    get NumAlumnos() {
-        return this._numAlumnos;
-    }
-    set NumAlumnos(num) {
-        this._numAlumnos = num;
-    }
-}
-
-class Instituto {
-    constructor(id, nombre, grupos) {
-        this._id = id;
-        this._nombre = nombre;
-        this._grupos = grupos;
-    }
-
-    get Id() {
-        return this._id;
-    }
-    get Nombre() {
-        return this._nombre;
-    }
-
-    cuantosAlumnos() {
-        let devolver = 0;
-        for (let i = 0; i < this._grupos.length; i++) {
-            devolver += this._grupos[i].NumAlumnos;
-        }
-        return devolver;
-    }
-
-    addGrupo(grupo){
-        this._grupos.push(grupo);
-    }
-}
+import Instituto from "./instituto.js";
+import Grupo from "./grupo.js";
 
 let primeroDAW = new Grupo(1, 30);
 let segundoDAW = new Grupo(2, 20);
